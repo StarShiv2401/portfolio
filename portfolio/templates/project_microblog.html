@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block content %}
+    <main class="main main--project">
+        <div>
+            <img
+                    class="hero"
+                    src="{{ url_for('static', filename = project['hero']) }}"
+                    alt="People interacting on a microblogging platform, symbolizing quick and easy online communication"
+            />
+            <article class="project">
+                <article class="project__content">
+                    <h2 class="project__heading">{{ project['name'] }}</h2>
+                    <p>
+                        I created this Microblog web application to provide users with a simple and clean platform for sharing short posts. The app allows users to quickly write, submit, and view micro-posts in a continuous feed, making it easy to document ideas, updates, or thoughts. It focuses on simplicity and ease of use, offering an uncluttered space where content takes center stage.
+                    </p>
+                    <p>
+                        The application is built using Python, Flask, and MongoDB. Flask handles the server-side logic and routing, while MongoDB stores the user posts securely and efficiently. I deployed the project on Render for smooth and reliable online access. Through this project, I further strengthened my skills in full-stack development, dynamic content management, and building user-friendly web applications.
+                    </p>
+                </article>
+                <section>
+                    <article class="project__meta-group">
+                        <h3 class="project__heading project__heading--meta">Technologies used</h3>
+                        <ul class="technology-list">
+                            <li class="technology-list__item">Python</li>
+                            <li class="technology-list__item">Flask</li>
+                            <li class="technology-list__item">MongoDB</li>
+                        </ul>
+                    </article>
+                    <a class="cta" href="{{ project['prod'] }}" target="_blank">
+                        <img class="cta__icon" src="{{ url_for('static', filename = 'img/pointer.svg') }}">
+                        View in production
+                    </a>
+                </section>
+            </article>
+        </div>
+    </main>
+{% endblock %}

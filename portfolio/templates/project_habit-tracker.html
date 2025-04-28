@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block content %}
+    <main class="main main--project">
+        <div>
+            <img
+                    class="hero"
+                    src="{{ url_for('static', filename = project['hero']) }}"
+                    alt="Hand-drawn habit tracker chart in a notebook, representing personal goal setting and daily progress tracking."
+            />
+            <article class="project">
+                <article class="project__content">
+                    <h2 class="project__heading">{{ project['name'] }}</h2>
+                    <p>
+                        I developed this Habit Tracker web application to help users build and maintain positive daily habits. The app allows users to create custom habits, update their daily progress, and visualize their consistency over the week through a clean and user-friendly interface. It is designed to be simple yet effective, making habit tracking easy and accessible for everyone.
+                    </p>
+                    <p>
+                        The application is built using Python, Flask, and MongoDB. Flask handles the backend operations, while MongoDB securely manages and stores user data. The project is deployed on Railway for seamless online access. Through building this project, I strengthened my skills in full-stack development, backend integration, and real-time data management.
+                    </p>
+                </article>
+                <section>
+                    <article class="project__meta-group">
+                        <h3 class="project__heading project__heading--meta">Technologies used</h3>
+                        <ul class="technology-list">
+                            <li class="technology-list__item">Python</li>
+                            <li class="technology-list__item">Flask</li>
+                            <li class="technology-list__item">MongoDB</li>
+                        </ul>
+                    </article>
+                    <a class="cta" href="{{ project['prod'] }}" target="_blank">
+                        <img class="cta__icon" src="{{ url_for('static', filename = 'img/pointer.svg') }}">
+                        View in production
+                    </a>
+                </section>
+            </article>
+        </div>
+    </main>
+{% endblock %}

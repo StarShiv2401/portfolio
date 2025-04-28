@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block content %}
+    <main class="main main--project">
+        <div>
+            <img
+                    class="hero"
+                    src="{{ url_for('static', filename = project['hero']) }}"
+                    alt="People interacting on a microblogging platform, symbolizing quick and easy online communication"
+            />
+            <article class="project">
+                <article class="project__content">
+                    <h2 class="project__heading">{{ project['name'] }}</h2>
+                    <p>
+                        I developed the Tech Times web application to provide a simple and focused platform for publishing and reading technology-related articles. The app allows users to easily create, submit, and view posts in a clean and organized feed, making it convenient to share and discover tech news. It is designed to prioritize content clarity, ensuring an uncluttered and distraction-free reading experience. Each post displays only the title and the content, keeping the platform minimalistic and user-friendly.
+                    </p>
+                    <p>
+                        The application is built using JavaScript, Node.js, EJS, and MongoDB. Node.js and Express handle the backend logic and routing, EJS manages the dynamic templates, and MongoDB securely stores all user posts. Through building this project, I strengthened my skills in full-stack development, server-side rendering, and working with NoSQL databases. The project is currently hosted locally for development and demonstration purposes, with plans to deploy it online in the future.
+                    </p>
+                </article>
+                <section>
+                    <article class="project__meta-group">
+                        <h3 class="project__heading project__heading--meta">Technologies used</h3>
+                        <ul class="technology-list">
+                            <li class="technology-list__item">JavaScript</li>
+                            <li class="technology-list__item">Node.js</li>
+                            <li class="technology-list__item">EJS</li>
+                            <li class="technology-list__item">MongoDB</li>
+                        </ul>
+                    </article>
+                    <div class="cta cta--disabled">
+                        <img class="cta__icon" src="{{ url_for('static', filename='img/in-progress.svg') }}">
+                        Work in progress
+                    </div>
+                </section>
+            </article>
+        </div>
+    </main>
+{% endblock %}
