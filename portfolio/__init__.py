@@ -22,10 +22,9 @@ projects = [
     {
         "name": "Tech Times",
         "thumb": "img/blog.png",
-        "hero": "img/blog.png",
+        "hero": "img/bg.jpg",
         "categories": ["Node.js", "EJS", "MongoDB"],
-        "slug": "tech-times",
-        "prod": True
+        "slug": "tech-times"
     }
 ]
 
