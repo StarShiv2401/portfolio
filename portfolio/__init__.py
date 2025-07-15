@@ -9,7 +9,7 @@ projects = [
         "hero": "img/ht.jpg",
         "categories": ["Python", "Flask", "MongoDB"],
         "slug": "habit-tracker",
-        "prod": "https://habit-tracker-production-aeaa.up.railway.app/"
+        "prod": "https://habit-tracker-4mjg.onrender.com/"
     },
     {
         "name": "Microblog",
